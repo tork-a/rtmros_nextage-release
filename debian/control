@@ -1,0 +1,12 @@
+Source: ros-groovy-nextage-description
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin, ros-groovy-urdf
+Homepage: http://ros.org/wiki/nextage_description
+Standards-Version: 3.9.2
+
+Package: ros-groovy-nextage-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-urdf
+Description: The nextage_description package

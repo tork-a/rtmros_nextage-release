@@ -34,6 +34,33 @@
 #
 # Author: Isaac Isao Saito
 
+import time
+import threading
+
+import rospy
+
+
+class AirhandReleaseThread(threading.Thread):
+    '''
+    With airhand, to release by blowing air needs to be stopped after certain
+    amount of time. Usually a few seconds, not too short for the air compressor
+    to have ample time for a reaction, is a good idea. This thread is used
+    in order to do so without letting the computer program halt.
+    '''
+    def __init__(self, nhand, hand, sleeptime):
+        '''
+        @type nhand: NextageHand
+        @type hand: str
+        '''
+        threading.Thread.__init__(self)
+        self._nhand = nhand
+        self._hand = hand
+        self._sleeptime = sleeptime
+
+    def run(self):
+        time.sleep(self._sleeptime)
+        self._nhand.use_airhand(self._nhand.AIRHAND_KEEP, self._hand)
+
 
 class NextageHand(object):
     '''
@@ -73,6 +100,8 @@ class NextageHand(object):
     _DIO_VALVE_L_2 = 26
     _DIO_EJECTOR_L_1 = 27
     _DIO_EJECTOR_L_2 = 28
+
+    _SLEEP_POST_RELEASE = 3.0
 
     def __init__(self, parent):
         '''
@@ -149,8 +178,13 @@ class NextageHand(object):
         # rospy.loginfo('dout={}, mask={}'.format(dout, mask))
         # # With this print formatting, you can copy the output and paste
         # # directly into writeDigitalOutputWithMask method if you wish.
-        print 'dout, mask:\n{},\n{}\n{}'.format(dout, mask, print_index)
-        self._parent.writeDigitalOutputWithMask(dout, mask)
+        rospy.loginfo('dout, mask:\n{},\n{}\n{}'.format(dout, mask,
+                                                        print_index))
+        try:
+            self._parent.writeDigitalOutputWithMask(dout, mask)
+        except AttributeError as e:
+            rospy.logerr('AttributeError from robot.\nTODO: Needs handled.')
+            rospy.logerr('\t{}'.format(e))            
 
     def turn_handlight(self, hand=None, on=True):
         '''
@@ -237,7 +271,7 @@ class NextageHand(object):
                 dout = [self._DIO_VALVE_L_2]
         else:
             # TODO: Might want to thrown exception?
-            print 'nono gripper'
+            rospy.logwarn('No gripper specified. Do nothing.')
             return
         self._dio_writer(dout, mask)
 
@@ -263,9 +297,15 @@ class NextageHand(object):
             if self.HAND_R == hand:
                 # dout = [_DIO_EJECTOR_R_1]  #TODO: https://bitbucket.org/tork-a/iros13/issue/37/dio#comment-6611013
                 dout = [self._DIO_EJECTOR_R_2]
+
+                # Create a thread to do KEEP action after the specified amount
+                # of time without stopping the program.
+                thread = AirhandReleaseThread(self, hand,
+                                              self._SLEEP_POST_RELEASE)
+                thread.start()
         else:
             # TODO: Might want to thrown exception?
-            print 'nono gripper'
+            rospy.logwarn('No gripper specified. Do nothing.')
             return
         self._dio_writer(dout, mask)
 

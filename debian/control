@@ -1,0 +1,12 @@
+Source: ros-hydro-nextage-description
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-urdf
+Homepage: http://ros.org/wiki/nextage_description
+Standards-Version: 3.9.2
+
+Package: ros-hydro-nextage-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-urdf
+Description: The nextage_description package

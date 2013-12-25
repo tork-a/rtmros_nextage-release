@@ -1,0 +1,32 @@
+ros-hydro-nextage-description (0.2.5-0precise) precise; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 24 Dec 2013 15:00:00 -0000
+
+ros-hydro-nextage-description (0.2.4-0precise) precise; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 02 Dec 2013 15:00:00 -0000
+
+ros-hydro-nextage-description (0.2.3-0precise) precise; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 04 Nov 2013 15:00:00 -0000
+
+ros-hydro-nextage-description (0.2.2-0precise) precise; urgency=high
+
+  * install models, urdf, www
+  * Adjust to web-tablet version discussed at https://github.com/start-jsk/open-industrial-controllers/issues/121. Please revert this if this causes any bad effect.
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 03 Nov 2013 15:00:00 -0000
+
+ros-hydro-nextage-description (0.2.1-0precise) precise; urgency=high
+
+  * Initial commit to the public repo (migrated from private repo)
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 30 Oct 2013 15:00:00 -0000
+
+

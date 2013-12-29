@@ -1,5 +1,28 @@
 ## rtmros_nextage - 0.2.5-0
 
+User `n130s@130s-t440s` released the packages in the `rtmros_nextage` repository by running `/usr/bin/bloom-release --rosdistro groovy --track groovy rtmros_nextage` on `Sun, 29 Dec 2013 10:08:58 -0000`
+
+These packages were released:
+- `nextage_description`
+- `nextage_moveit_config`
+- `nextage_ros_bridge`
+- `rtmros_nextage`
+
+Version of package(s) in repository `rtmros_nextage`:
+- rosdistro version: `0.2.4-0`
+- old version: `0.2.4-0`
+- new version: `0.2.5-0`
+
+Versions of tools used:
+- bloom version: `0.4.4`
+- catkin_pkg version: `0.1.24`
+- rosdep version: `0.10.24`
+- rosdistro version: `0.2.20`
+- vcstools version: `0.1.33`
+
+
+## rtmros_nextage - 0.2.5-0
+
 User `n130s@130s-t440s` released the packages in the `rtmros_nextage` repository by running `/usr/bin/bloom-release --rosdistro hydro --track hydro rtmros_nextage` on `Wed, 25 Dec 2013 06:11:32 -0000`
 
 These packages were released:

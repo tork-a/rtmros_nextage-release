@@ -2,6 +2,11 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.6 (2014-01-13)
+------------------
+* (nextage_ros_bridge) Add missiong import
+* Contributors: Isao Isaac Saito
+
 0.2.5 (2013-12-25)
 ------------------
 * Adjust to the change on hironx

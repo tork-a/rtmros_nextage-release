@@ -1,0 +1,44 @@
+ros-groovy-nextage-ros-bridge (0.2.6-0quantal) quantal; urgency=high
+
+  * (nextage_ros_bridge) Add missiong import
+  * Contributors: Isao Isaac Saito
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 12 Jan 2014 15:00:00 -0000
+
+ros-groovy-nextage-ros-bridge (0.2.5-0quantal) quantal; urgency=high
+
+  * Adjust to the change on hironx
+  * Contributors: Isao Isaac Saito
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Tue, 24 Dec 2013 15:00:00 -0000
+
+ros-groovy-nextage-ros-bridge (0.2.4-0quantal) quantal; urgency=high
+
+  * fix same reason that we have in https://code.google.com/p/rtm-ros-robotics/source/detail?r=6039, need to modify .xml/.conf file during install process
+  * Change name of a launch file to adjust common practice in rtmros world.
+  * rename script (due to discussion in issue #7 <https://github.com/130s/rtmros_nextage/issues/7>)
+  * Contributors: Isaac Isao Saito, Kei Okada
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 02 Dec 2013 15:00:00 -0000
+
+ros-groovy-nextage-ros-bridge (0.2.3-0quantal) quantal; urgency=high
+
+
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 04 Nov 2013 15:00:00 -0000
+
+ros-groovy-nextage-ros-bridge (0.2.2-0quantal) quantal; urgency=high
+
+  * add depends to nextage_description and check if nextage_description_SOURCE_DIR exsits
+  * nextage_ros_bridge) add appropriate comment for exception at hand
+  * nextage_ros_bridge) add nextage_ros_bridge_viz.launch that runs all the things needed for running robots (ros_bridge, RViz).
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 03 Nov 2013 15:00:00 -0000
+
+ros-groovy-nextage-ros-bridge (0.2.1-0quantal) quantal; urgency=high
+
+  * Initial commit to the public repo (migrated from private repo)
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Wed, 30 Oct 2013 15:00:00 -0000
+
+

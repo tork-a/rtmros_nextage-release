@@ -35,48 +35,37 @@
 #
 # Author: Isaac Isao Saito
 
-# This should come earlier than later import. 
+# This should come earlier than later import.
 # See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6773
+import unittest
+
+#from hrpsys import rtm
 from nextage_ros_bridge import nextage_client
 
-from hrpsys import rtm
-import argparse
+_ARMGROUP_TESTED = 'larm'
+_LINK_TESTED = 'LARM_JOINT5'
+_GOINITIAL_TIME_MIDSPEED = 3  # second
+_NUM_CARTESIAN_ITERATION = 300
+_PKG = 'nextage_ros_bridge'
 
+
+class TestNextageopenHand(unittest.TestCase):
+    '''
+    Test NextageClient with rostest.
+    '''
+
+    @classmethod
+    def setUpClass(self):
+        self._robot = nextage_client.NextageClient()
+        self._robot.init()
+        self._robot.goInitial(_GOINITIAL_TIME_MIDSPEED)
+
+    def test_airhand_release_l(self):
+        self._robot.airhand_release_l()
+
+    def test_airhand_release_r(self):
+        self._robot.airhand_release_r()
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='hiro command line interpreters')
-    parser.add_argument('--host', help='corba name server hostname')
-    parser.add_argument('--port', help='corba name server port number')
-    parser.add_argument('--modelfile', help='robot model file nmae')
-    parser.add_argument('--robot', help='robot modlule name (RobotHardware0 for real robot, Robot()')
-    args, unknown = parser.parse_known_args()
-
-    if args.host:
-        rtm.nshost = args.host
-    if args.port:
-        rtm.nsport = args.port
-    if not args.robot:
-        args.robot = "RobotHardware0" if args.host else "HiroNX(Robot)0"
-    if not args.modelfile:
-        args.modelfile = ""
-
-    # support old style format
-    if len(unknown) >= 2:
-        args.robot = unknown[0]
-        args.modelfile = unknown[1]
-    robot = nxc = nextage_client.NextageClient()
-    # Use generic name for the robot instance. This enables users on the
-    # script commandline (eg. ipython) to run the same commands without asking
-    # them to specifically tell what robot they're using (eg. hiro, nxc).
-    # This is backward compatible so that users can still keep using `nxc`.
-    # See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6926
-    robot.init(robotname=args.robot, url=args.modelfile)
-
-# for simulated robot
-# $ ./hironx.py
-#
-# for real robot
-# ./hironx.py  --host hiro014
-# ./ipython -i hironx.py --host hiro014
-# for real robot with custom model file
-# ./hironx.py  --host hiro014 --modelfile /opt/jsk/etc/HIRONX/model/main.wrl
+    import rostest
+    rostest.rosrun(_PKG, 'test_nxopen_hand', TestNextageopenHand)

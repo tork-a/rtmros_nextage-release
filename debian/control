@@ -1,0 +1,12 @@
+Source: ros-hydro-rtmros-nextage
+Section: misc
+Priority: extra
+Maintainer: Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin
+Homepage: http://ros.org/wiki/rtmros_nextage
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rtmros-nextage
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-nextage-description, ros-hydro-nextage-moveit-config, ros-hydro-nextage-ros-bridge
+Description: The rtmros_nextage package is a ROS interface for Nextage dual-armed robot from Kawada Robotics Inc.

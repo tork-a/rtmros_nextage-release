@@ -1,3 +1,26 @@
+## rtmros_nextage (hydro) - 0.2.11-0
+
+User `n130s@130s-t440s` released the packages in the `rtmros_nextage` repository into the `hydro` distro by running `/usr/bin/bloom-release rtmros_nextage --track hydro --rosdistro hydro` on `Wed, 05 Mar 2014 05:02:35 -0000`
+
+These packages were released:
+- `nextage_description`
+- `nextage_moveit_config`
+- `nextage_ros_bridge`
+- `rtmros_nextage`
+
+Version of package(s) in repository `rtmros_nextage`:
+- rosdistro version: `0.2.10-0`
+- old version: `0.2.10-0`
+- new version: `0.2.11-0`
+
+Versions of tools used:
+- bloom version: `0.5.1`
+- catkin_pkg version: `0.1.26`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.4`
+- vcstools version: `0.1.33`
+
+
 ## rtmros_nextage - 0.2.10-0
 
 User `n130s@130s-t440s` released the packages in the `rtmros_nextage` repository by running `/usr/bin/bloom-release --rosdistro hydro --track hydro rtmros_nextage` on `Tue, 18 Feb 2014 14:05:50 -0000`

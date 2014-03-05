@@ -1,0 +1,12 @@
+Source: ros-groovy-nextage-moveit-config
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin, ros-groovy-nextage-description
+Homepage: http://ros.org/wiki/nextage_description
+Standards-Version: 3.9.2
+
+Package: ros-groovy-nextage-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-moveit-ros-move-group, ros-groovy-nextage-description
+Description: An automatically generated package with all the configuration and launch files for using the NextageOpen with the MoveIt Motion Planning Framework.

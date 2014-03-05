@@ -39,7 +39,7 @@
 # See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6773
 import unittest
 
-#from hrpsys import rtm
+from hrpsys import rtm
 from nextage_ros_bridge import nextage_client
 
 _ARMGROUP_TESTED = 'larm'
@@ -56,8 +56,14 @@ class TestNextageopen(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
+
+        modelfile = '/opt/jsk/etc/HIRONX/model/main.wrl'
+        rtm.nshost = 'nxc100'
+        robotname = "RobotHardware0"
+
         self._robot = nextage_client.NextageClient()
-        self._robot.init()
+        self._robot.init(robotname=robotname, url=modelfile)
+
         self._robot.goInitial(_GOINITIAL_TIME_MIDSPEED)
 
 #    def test_set_relative_x(self):

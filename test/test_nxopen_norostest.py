@@ -35,12 +35,40 @@
 #
 # Author: Isaac Isao Saito
 
-# This should come earlier than later import. 
+# This should come earlier than later import.
 # See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6773
 from nextage_ros_bridge import nextage_client
 
 from hrpsys import rtm
 import argparse
+
+_ARMGROUP_TESTED = 'rarm'
+_LINK_TESTED = 'RARM_JOINT5'
+
+
+class TestNextageNoRostest(object):
+    '''
+    Test NextageClient without relying on rostest.
+    This can be upgraded to rostest version that is more ideal/almost required
+    for ROS package.
+    '''
+
+    def __init__(self, nc):
+        '''
+        @type nc: NextageClient
+        '''
+        self._nxc = nc
+
+#    def test_set_relative_x(self):
+    def test_set_relative(self, dx=0, dy=0, dz=0):
+        #print('Start moving dx={0}, dy={0}, dz={0}'.format(dx, dy, dz))
+        self._nxc.seq_svc.setMaxIKError(0.00001, 0.01)
+        posi_prev = self._nxc.getCurrentPosition(_LINK_TESTED)
+        for i in range(200):
+            self._nxc.setTargetPoseRelative(_ARMGROUP_TESTED, _LINK_TESTED,
+                                            dx, dy, dz, tm=0.2)
+            #print('   joint=', nxc.getJointAngles()[3:9])
+        posi_post = self._nxc.getCurrentPosition(_LINK_TESTED)
 
 
 if __name__ == '__main__':
@@ -64,19 +92,11 @@ if __name__ == '__main__':
     if len(unknown) >= 2:
         args.robot = unknown[0]
         args.modelfile = unknown[1]
-    robot = nxc = nextage_client.NextageClient()
-    # Use generic name for the robot instance. This enables users on the
-    # script commandline (eg. ipython) to run the same commands without asking
-    # them to specifically tell what robot they're using (eg. hiro, nxc).
-    # This is backward compatible so that users can still keep using `nxc`.
-    # See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6926
-    robot.init(robotname=args.robot, url=args.modelfile)
-
-# for simulated robot
-# $ ./hironx.py
-#
-# for real robot
-# ./hironx.py  --host hiro014
-# ./ipython -i hironx.py --host hiro014
-# for real robot with custom model file
-# ./hironx.py  --host hiro014 --modelfile /opt/jsk/etc/HIRONX/model/main.wrl
+    nxc = nextage_client.NextageClient()
+    nxc.init(robotname=args.robot, url=args.modelfile)
+    nxc.goInitial()
+    tnn = TestNextageNoRostest(nxc)
+#    tnn.test_set_relative_x()
+    tnn.test_set_relative(dx=0.0001)
+    tnn.test_set_relative(dy=0.0001)
+    tnn.test_set_relative(dz=0.0001)

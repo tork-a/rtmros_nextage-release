@@ -1,0 +1,119 @@
+ros-hydro-nextage-ros-bridge (0.2.15-0precise) precise; urgency=high
+
+  * (nextage_ros_bridge_real.launch) Init commit. This must be run when working with a real robot, instead of nextage_ros_bridge.launch. Fix #79 <https://github.com/tork-a/rtmros_nextage/issues/79>
+  * Disable ServoController. NXO by default does not ship with servo-controlled hand.
+  * Contributors: Isaac IY Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Sat, 12 Jul 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.14-0precise) precise; urgency=high
+
+  * (nextage_client.py) adjust initial position to that of HIRONX, evens it up.
+  * Contributors: Isaac IY Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Thu, 19 Jun 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.13-0precise) precise; urgency=high
+
+
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Tue, 27 May 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.12-0precise) precise; urgency=high
+
+  * Resolves #48 <https://github.com/tork-a/rtmros_nextage/issues/48>
+  * Contributors: Isaac IY Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 05 May 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.11-0precise) precise; urgency=high
+
+  * fix to https://github.com/tork-a/rtmros_nextage/issues/53
+  * Add the source text files of tutorials on ROS wiki. These are just a backup and not intended to be updated per every change made on ROS wiki. The location of the source of ROS wiki doc needs to be figured out (discussed in https://github.com/tork-a/rtmros_nextage/issues/12).
+  * Contributors: Isaac Isao Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Tue, 04 Mar 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.10-0precise) precise; urgency=high
+
+  * Use generic name for the robot instance. This enables users on the script commandline (eg. ipython) to run the same commands without asking them to specifically tell what robot they're using (eg. hiro, nxc). This is backward compatible so that users can still keep using nxc. See http://code.google.com/p/rtm-ros-robotics/source/detail?r=6926 for hironx.
+  * Install unittests for the first time.
+  * Contributors: Isaac Isao Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 17 Feb 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.9-0precise) precise; urgency=high
+
+  * Fixed installation of missing py files
+  * Contributors: Isao Isaac Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 02 Feb 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.8-0precise) precise; urgency=high
+
+  * Generalize hands DIO variables, and add a method to reassign them in the derived classes.
+  * Fix to issue #9 <https://github.com/tork-a/rtmros_nextage/issues/9> (https://github.com/tork-a/rtmros_nextage/issues/9)
+  * Adjust to the DIO assignment change.
+  * (test_hironx_derivedmethods_rostest.py) Tentative fix to enable to connect to real robot. Needs improvement later to port out embedded robot's info.
+  * Fixed handlight not function (wrong comparison of bool and str)
+  * Add more unittesting. Separate tests for hand since the type of testing for hands I'll write this time will be not necessarily general enough.
+  * Add tentative test file that checks cartesian
+  * (nextage_ros_bridge) Refactoring to separate modules per hand type, to allow more flexible hand tool combination. Not tested yet on a real robot and on simulation it isn't possible to test as of the moment.
+  * Contributors: Isao Isaac Saito
+
+ -- Isaac Isao Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 02 Feb 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.7-0precise) precise; urgency=high
+
+  * (nextage_client.py) Adjust initial poses to what the manufacturing company defines as the standard.
+  * (nextage_client.py) Override pose (to more safer one) and method (to allow this class to choose which RT component to load).
+  * Improve nextage.py import order and source (based on https://github.com/tork-a/rtmros_nextage/issues/25#issuecomment-32332068)
+  * (nextage.py) Fix to https://github.com/tork-a/rtmros_nextage/issues/24
+  * Contributors: Isaac Isao Saito, Hajime Saito, Kei Okada
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Sat, 18 Jan 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.6-0precise) precise; urgency=high
+
+  * (nextage_ros_bridge) Add missiong import
+  * Contributors: Isao Isaac Saito
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 12 Jan 2014 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.5-0precise) precise; urgency=high
+
+  * Adjust to the change on hironx
+  * Contributors: Isao Isaac Saito
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Tue, 24 Dec 2013 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.4-0precise) precise; urgency=high
+
+  * fix same reason that we have in https://code.google.com/p/rtm-ros-robotics/source/detail?r=6039, need to modify .xml/.conf file during install process
+  * Change name of a launch file to adjust common practice in rtmros world.
+  * rename script (due to discussion in issue #7 <https://github.com/130s/rtmros_nextage/issues/7>)
+  * Contributors: Isaac Isao Saito, Kei Okada
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 02 Dec 2013 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.3-0precise) precise; urgency=high
+
+
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Mon, 04 Nov 2013 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.2-0precise) precise; urgency=high
+
+  * add depends to nextage_description and check if nextage_description_SOURCE_DIR exsits
+  * nextage_ros_bridge) add appropriate comment for exception at hand
+  * nextage_ros_bridge) add nextage_ros_bridge_viz.launch that runs all the things needed for running robots (ros_bridge, RViz).
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Sun, 03 Nov 2013 15:00:00 -0000
+
+ros-hydro-nextage-ros-bridge (0.2.1-0precise) precise; urgency=high
+
+  * Initial commit to the public repo (migrated from private repo)
+
+ -- Isao Isaac Saito <iisaito@opensource-robotics.tokyo.jp>  Wed, 30 Oct 2013 15:00:00 -0000
+
+

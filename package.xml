@@ -1,6 +1,6 @@
 <package>
   <name>nextage_moveit_config</name>
-  <version>0.2.15</version>
+  <version>0.2.17</version>
   <description>An automatically generated package with all the configuration and launch files for using the NextageOpen with the MoveIt Motion Planning Framework.
   </description>
   <maintainer email="k-okada@jsk.t.u-tokyo.ac.jp">Kei Okada</maintainer>
@@ -18,6 +18,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>nextage_description</build_depend>
+  <run_depend>hironx_moveit_config</run_depend>
   <run_depend>moveit_planners</run_depend>
   <run_depend>moveit_ros</run_depend>
   <run_depend>moveit_ros_move_group</run_depend>

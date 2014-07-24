@@ -2,6 +2,18 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.17 (2014-07-24)
+-------------------
+* (nextage_client) Adjusted to DIO spec change. Improve DIO methods. Add unit tests for DIO features.
+* Contributors: Isaac IY Saito
+
+0.2.16 (2014-07-24)
+-------------------
+* Specify min version of a dependency that are used in launch files.
+* Add natto-view to simulation.
+* Remove nextage_ros_bridge.launch that was only internal to other launch files. Delegate functionality to hironx_ros_bridge.launch
+* Contributors: Isaac IY Saito
+
 0.2.15 (2014-07-13)
 -------------------
 * (nextage_ros_bridge_real.launch) Init commit. This must be run when working with a real robot, instead of nextage_ros_bridge.launch. Fix `#79 <https://github.com/tork-a/rtmros_nextage/issues/79>`_

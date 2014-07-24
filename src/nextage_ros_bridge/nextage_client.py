@@ -57,6 +57,12 @@ class NextageClient(HIRONX, object):
                [0, 0, 0, 0],
                [0, 0, 0, 0]]
 
+    # Default digital input groups defined by manufacturer, Kawada, as of
+    # July 2014. This may change per the robot in the future and in then
+    # need modified. See also readDinGroup method.
+    _DI_PORTS_L = [25, 21, 22, 23, 24]
+    _DI_PORTS_R = [20, 16, 17, 18, 19]
+
     def __init__(self):
         '''
         Do not get confused that there is also a method called
@@ -78,69 +84,69 @@ class NextageClient(HIRONX, object):
         '''
         HIRONX.init(self, robotname=robotname, url=url)
 
-    def turn_handlight_r(self, is_on=True):
-        self._hand.turn_handlight(self._hand.HAND_R, is_on)
+    def handlight_r(self, is_on=True):
+        return self._hand.turn_handlight(self._hand.HAND_R, is_on)
 
-    def turn_handlight_l(self, is_on=True):
-        self._hand.turn_handlight(self._hand.HAND_L, is_on)
+    def handlight_l(self, is_on=True):
+        return self._hand.turn_handlight(self._hand.HAND_L, is_on)
 
-    def turn_handlight_both(self, is_on=True):
-        self._hand.turn_handlight(None, is_on)
+    def handlight_both(self, is_on=True):
+        return self._hand.turn_handlight(None, is_on)
 
-    def handtool_eject_l(self):
-        self._hand.toolchanger_l_command.execute(
+    def handtool_l_eject(self):
+        return self._hand.toolchanger_l_command.execute(
             self._hand.toolchanger_l_command.HAND_TOOLCHANGE_OFF)
 
-    def handtool_eject_r(self):
-        self._hand.toolchanger_r_command.execute(
+    def handtool_r_eject(self):
+        return self._hand.toolchanger_r_command.execute(
             self._hand.toolchanger_r_command.HAND_TOOLCHANGE_OFF)
 
-    def handtool_attach_l(self):
-        self._hand.toolchanger_l_command.execute(
+    def handtool_l_attach(self):
+        return self._hand.toolchanger_l_command.execute(
             self._hand.toolchanger_l_command.HAND_TOOLCHANGE_ON)
 
-    def handtool_attach_r(self):
-        self._hand.toolchanger_r_command.execute(
+    def handtool_r_attach(self):
+        return self._hand.toolchanger_r_command.execute(
             self._hand.toolchanger_r_command.HAND_TOOLCHANGE_ON)
 
-    def gripper_close_l(self):
-        self._hand.gripper_l_command.execute(
+    def gripper_l_close(self):
+        return self._hand.gripper_l_command.execute(
             self._hand.gripper_l_command.GRIPPER_CLOSE)
 
-    def gripper_close_r(self):
-        self._hand.gripper_r_command.execute(
+    def gripper_r_close(self):
+        return self._hand.gripper_r_command.execute(
             self._hand.gripper_r_command.GRIPPER_CLOSE)
 
-    def gripper_open_l(self):
-        self._hand.gripper_l_command.execute(
+    def gripper_l_open(self):
+        return self._hand.gripper_l_command.execute(
             self._hand.gripper_r_command.GRIPPER_OPEN)
 
-    def gripper_open_r(self):
-        self._hand.gripper_r_command.execute(
+    def gripper_r_open(self):
+        return self._hand.gripper_r_command.execute(
             self._hand.gripper_r_command.GRIPPER_OPEN)
 
-    def airhand_drawin_l(self):
-        self._hand.airhand_l_command.execute(
+    def airhand_l_drawin(self):
+        return self._hand.airhand_l_command.execute(
             self._hand.airhand_l_command.AIRHAND_DRAWIN)
 
-    def airhand_drawin_r(self):
-        self._hand.airhand_r_command.execute(
+    def airhand_r_drawin(self):
+        return self._hand.airhand_r_command.execute(
             self._hand.airhand_r_command.AIRHAND_DRAWIN)
 
-    def airhand_keep_l(self):
-        self._hand.airhand_l_command.execute(
+    def airhand_l_keep(self):
+        return self._hand.airhand_l_command.execute(
             self._hand.airhand_l_command.AIRHAND_KEEP)
 
-    def airhand_keep_r(self):
-        self._hand.airhand_r_command.execute(
+    def airhand_r_keep(self):
+        return self._hand.airhand_r_command.execute(
             self._hand.airhand_r_command.AIRHAND_KEEP)
 
-    def airhand_release_l(self):
-        self._hand.airhand_l_command.execute(
+    def airhand_l_release(self):
+        return self._hand.airhand_l_command.execute(
             self._hand.airhand_l_command.AIRHAND_RELEASE)
 
-    def airhand_release_r(self):
-        self._hand.airhand_r_command.execute(
+    def airhand_r_release(self):
+        return self._hand.airhand_r_command.execute(
             self._hand.airhand_r_command.AIRHAND_RELEASE)
 
     def initialize_hand_dio(self):
@@ -177,3 +183,70 @@ class NextageClient(HIRONX, object):
             # Set the pose where eefs level with the tabletop by default.
             init_pose_type = HIRONX.INITPOS_TYPE_EVEN
         return HIRONX.goInitial(self, tm, wait, init_pose_type)
+
+    def readDinGroup(self, ports, dumpFlag=True):
+        '''
+        Print the currently set values of digital input registry. Print output order is tailored 
+        for the hands' functional group; DIO spec that is disloseable as of 7/17/2014 is:
+
+             Left hand: 
+                  DI26: Tool changer attached or not.
+                  DI22, 23: Fingers.
+                  DI24, 25: Compliance.
+
+             Right hand: 
+                  DI21: Tool changer attached or not.
+                  DI17, 18: Fingers.
+                  DI19, 20: Compliance.
+
+        Example output, for the right hand: 
+
+            No hand attached:
+
+                In [1]: robot.printDin([20, 16, 17, 18, 19])
+                DI21 is 0
+                DI17 is 0
+                DI18 is 0
+                DI19 is 0
+                DI20 is 0
+                Out[1]: [(20, 0), (16, 0), (17, 0), (18, 0), (19, 0)]
+    
+            Hand attached, fingers closed:
+
+                In [1]: robot.printDin([20, 16, 17, 18, 19])
+                DI21 is 1
+                DI17 is 1
+                DI18 is 0
+                DI19 is 0
+                DI20 is 0
+                Out[1]: [(20, 0), (16, 0), (17, 0), (18, 0), (19, 0)]
+    
+        @author: Koichi Nagashima
+        @since: 0.2.16
+        @type ports: int or [int].
+        @param dumpFlag: Print each pin if True.
+        @param ports: A port number or a list of port numbers in D-in registry.
+        @rtype: [(int, int)]
+        @return: List of tuples of port and din value. If the arg ports was an int value, 
+                 this could be a list with single tuple in it.
+        '''
+        if isinstance(ports, int):
+            ports = [ports];
+            pass;
+        #din = self.rh_svc.readDigitalInput()[1];
+        ## rh_svc.readDigitalInput() returns tuple, of which 1st element is not needed here.
+        din = self.readDigitalInput();
+        resAry=[];
+        for port in ports:
+            res = din[port]
+            if (dumpFlag): print("DI%02d is %d"%(port+1,res));
+            resAry.append((port, res));
+            pass;
+        return resAry;
+
+    def readDinGroupL(self, dumpFlag=True):
+        return self.readDinGroup(self._DI_PORTS_L, dumpFlag)
+
+    def readDinGroupR(self, dumpFlag=True):
+        return self.readDinGroup(self._DI_PORTS_R, dumpFlag)
+

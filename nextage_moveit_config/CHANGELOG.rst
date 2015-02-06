@@ -2,6 +2,11 @@
 Changelog for package nextage_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2015-02-03)
+------------------
+* Remove non-existent eef groups.
+* Contributors: Isaac IY Saito
+
 0.5.3 (2014-11-13)
 ------------------
 

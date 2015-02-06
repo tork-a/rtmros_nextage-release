@@ -2,6 +2,13 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2015-02-03)
+------------------
+* [nextage_ros_bridge] Fix path for catkin build
+* VRML stored location inside qnx is now NEXTAGE specific.
+* (launch) Accept more as an argument. Remove a redundant collada file.
+* Contributors: Isaac IY Saito, Ryohei Ueda
+
 0.5.3 (2014-11-13)
 ------------------
 * (DIO) Fix `#129 <https://github.com/tork-a/rtmros_nextage/issues/129>`_

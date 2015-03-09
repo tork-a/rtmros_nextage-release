@@ -2,6 +2,11 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.1 (2015-03-09)
+------------------
+* Start ROS clinent when the script begins
+* Contributors: Kei Okada
+
 0.6.0 (2015-02-03)
 ------------------
 * [nextage_ros_bridge] Fix path for catkin build

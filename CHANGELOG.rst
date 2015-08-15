@@ -2,6 +2,9 @@
 Changelog for package nextage_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.3 (2015-08-15)
+------------------
+
 0.6.2 (2015-05-12)
 ------------------
 * Correct changelogs to apply the important announcement.

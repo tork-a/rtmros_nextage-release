@@ -2,6 +2,11 @@
 Changelog for package rtmros_nextage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.3 (2015-08-15)
+------------------
+* [feat] Add `botharms`' MoveIt! group.
+* Contributors: Isaac IY Saito
+
 0.6.2 (2015-05-12)
 ------------------
 * (Doc) Correct changelogs to apply the important announcement.

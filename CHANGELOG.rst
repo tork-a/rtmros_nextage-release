@@ -2,6 +2,11 @@
 Changelog for package nextage_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.3 (2015-08-15)
+------------------
+* [feat] Add `botharms`' MoveIt! group.
+* Contributors: Isaac IY Saito
+
 0.6.2 (2015-05-12)
 ------------------
 

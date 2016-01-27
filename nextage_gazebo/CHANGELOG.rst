@@ -2,6 +2,11 @@
 Changelog for package nextage_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.5 (2016-01-27)
+------------------
+* [fix] fix namespace so that existing app can operate the robot on Gazebo
+* Contributors: Kei Okada
+
 0.7.4 (2016-01-26)
 ------------------
 * need to wait for finishing go_initial.py (https://github.com/tork-a/rtmros_nextage/pull/223/files#diff-16b25951a50b1e80569929d32a09102bR14)

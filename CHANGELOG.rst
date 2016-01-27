@@ -2,6 +2,9 @@
 Changelog for package nextage_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.4 (2016-01-26)
+------------------
+
 0.7.3 (2015-12-31)
 ------------------
 * [fix] Unnecessarily complicated dependency

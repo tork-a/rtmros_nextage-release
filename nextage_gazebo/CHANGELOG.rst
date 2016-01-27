@@ -1,13 +1,20 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package nextage_description
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package nextage_gazebo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.7.4 (2016-01-26)
 ------------------
+* need to wait for finishing go_initial.py (https://github.com/tork-a/rtmros_nextage/pull/223/files#diff-16b25951a50b1e80569929d32a09102bR14)
+* pass arg GUI
+* [gz] Retry tests upon failure
+* [gz] Add small unit tests
+* [gz] Minor formatting
 * [gazebo] Add non-zero mass so that links are not ignored
-* NextageOpen.urdf: add transmission and ros_control
+* update control parameters
+* http://answers.ros.org/question/200777/using-both-jointtrajectorycontroller-and-jointpositioncontroller-at-same-time-in-ros_control, we may not need both position controller and trajectory controller
+* use NextageOpen name space, use robot name. Not sure if this is necessary
+* package.xml: add depends to ros_controllers
 * set depend from nextage_description to nextage_gazebo is not a good idea, nextage_gazbeo should depends on nextage_description
-* HEAD_JOINT1_Link is too small, use default settings http://wiki.ros.org/urdf/Tutorials/Adding%20Physical%20and%20Collision%20Properties%20to%20a%20URDF%20Model
 * [gazebo] Add non-zero mass so that links are not ignored
 * Add Gazebo package. So far model not shown, and model seems to keep falling.
 * Contributors: Isaac I.Y. Saito, Kei Okada
@@ -19,6 +26,9 @@ Changelog for package nextage_description
 ------------------
 
 0.7.1 (2015-10-26)
+------------------
+
+0.7.0 (2015-10-21)
 ------------------
 
 0.6.6 (2015-10-17)
@@ -35,17 +45,12 @@ Changelog for package nextage_description
 
 0.6.2 (2015-05-12)
 ------------------
-* Correct changelogs to apply the important announcement.
-* Contributors: Isaac IY Saito
 
 0.6.1 (2015-03-09)
 ------------------
 
 0.6.0 (2015-02-03)
 ------------------
-* (IMPORTANT) VRML stored location inside qnx has now become NEXTAGE specific. Please see https://github.com/tork-a/rtmros_nextage/issues/153 for possible required actions.
-* (launch) Accept more as an argument. Remove a redundant collada file.
-* Contributors: Isaac IY Saito
 
 0.5.3 (2014-11-13)
 ------------------
@@ -61,17 +66,15 @@ Changelog for package nextage_description
 
 0.4.1 (2014-09-03)
 ------------------
-* Remove WAIST_Link to use only WAIST (Fix `#97 <https://github.com/tork-a/rtmros_nextage/issues/97>`_).
-* Contributors: Isaac IY Saito
 
 0.2.18 (2014-08-01)
 -------------------
 
-0.2.17 (2014-07-24)
--------------------
+0.2.17 (2014-07-24 14:01)
+-------------------------
 
-0.2.16 (2014-07-24)
--------------------
+0.2.16 (2014-07-24 10:09)
+-------------------------
 
 0.2.15 (2014-07-13)
 -------------------
@@ -91,11 +94,11 @@ Changelog for package nextage_description
 0.2.10 (2014-02-18)
 -------------------
 
-0.2.9 (2014-02-03)
-------------------
+0.2.9 (2014-02-03 12:34)
+------------------------
 
-0.2.8 (2014-02-03)
-------------------
+0.2.8 (2014-02-03 03:12)
+------------------------
 
 0.2.7 (2014-01-19)
 ------------------
@@ -110,13 +113,13 @@ Changelog for package nextage_description
 ------------------
 
 0.2.3 (2013-11-05)
------------
+------------------
 
 0.2.2 (2013-11-04)
------------
-* install models, urdf, www
-* Adjust to web-tablet version discussed at https://github.com/start-jsk/open-industrial-controllers/issues/121. Please revert this if this causes any bad effect.
+------------------
 
 0.2.1 (2013-10-31)
 ------------------
-* Initial commit to the public repo (migrated from private repo)
+
+0.2.0 (2013-10-30)
+------------------

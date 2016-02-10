@@ -2,6 +2,9 @@
 Changelog for package nextage_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.6 (2016-02-09)
+------------------
+
 0.7.5 (2016-01-27)
 ------------------
 * [fix] fix namespace so that existing app can operate the robot on Gazebo

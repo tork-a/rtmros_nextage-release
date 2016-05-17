@@ -2,6 +2,12 @@
 Changelog for package rtmros_nextage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.7 (2016-05-16)
+------------------
+* [fix] Wrong collada file location for real.launch.
+* [fix] Use NXO file instead of Hironx as a collision detector input.
+* Contributors: Isaac I.Y. Saito
+
 0.7.6 (2016-02-09)
 ------------------
 * [fix] Use RRT as default planner (workaround/fix `#170 <https://github.com/tork-a/rtmros_nextage/issues/170>`_)

@@ -70,13 +70,29 @@ class NextageClient(HIRONX, object):
     HAND_VER_0_4_2 = '0.4.2'
     HAND_VER_0_5_1 = '0.5.1'
 
+    use_gazebo = False
+
     def __init__(self):
         '''
         Do not get confused that there is also a method called
         'init' (without trailing underscores) that is succeeded from the
         super class as the tradition there.
         '''
-        super(NextageClient, self).__init__()
+        try:
+            if rospy.has_param('/gazebo'):
+                self.use_gazebo = True
+                print("\033[32m[INFO] Assuming Gazebo Simulator, so do not connect to CORBA systmes\033[0m")
+        # When there's no ros master running, underlining code,
+        # socket.create_connection more specifically, returns the simplest
+        # 'error' that is hard to be explicitly caught at exception block.
+        # See https://github.com/tork-a/rtmros_nextage/issues/262#issue-182487549
+        except:
+            print("ROS Master not found running. If you intended to use it (either for rosbridge or for Gazebo purposes, make sure you run necessary nodes.")
+
+        if not self.use_gazebo:
+            super(NextageClient, self).__init__()
+        else:
+            self.configurator_name = "gazebo(Nextage)"
         self.set_hand_version(self.HAND_VER_0_5_1)
 
     def init(self, robotname="HiroNX(Robot)0", url=""):
@@ -89,7 +105,8 @@ class NextageClient(HIRONX, object):
         @type robotname: str
         @type url: str
         '''
-        HIRONX.init(self, robotname=robotname, url=url)
+        if not self.use_gazebo:
+            HIRONX.init(self, robotname=robotname, url=url)
 
     def get_hand_version(self):
         '''
@@ -324,6 +341,7 @@ class NextageClient(HIRONX, object):
             ['el', "SoftErrorLimiter"],
             # ['co', "CollisionDetector"],
             # ['sc', "ServoController"],
+            ['ic', "ImpedanceController"],
             ['log', "DataLogger"]
             ]
 

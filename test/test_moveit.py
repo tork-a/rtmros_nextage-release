@@ -62,6 +62,14 @@ class TestDualarmMoveit(unittest.TestCase):
     _JOINTNAMES_RIGHTARM = ['RARM_JOINT0', 'RARM_JOINT1', 'RARM_JOINT2', 'RARM_JOINT3', 'RARM_JOINT4', 'RARM_JOINT5']
     _MOVEGROUP_ATTR_RIGHTARM = [_MOVEGROUP_NAME_RIGHTARM, _JOINTNAMES_RIGHTARM]
 
+    _MOVEGROUP_NAME_LEFTARM_TORSO = 'left_arm_torso'
+    _JOINTNAMES_LEFTARM_TORSO = _JOINTNAMES_TORSO +_JOINTNAMES_LEFTARM
+    _MOVEGROUP_ATTR_LEFTARM_TORSO = [_MOVEGROUP_NAME_LEFTARM_TORSO, _JOINTNAMES_LEFTARM_TORSO]
+
+    _MOVEGROUP_NAME_RIGHTARM_TORSO = 'right_arm_torso'
+    _JOINTNAMES_RIGHTARM_TORSO = _JOINTNAMES_TORSO + _JOINTNAMES_RIGHTARM
+    _MOVEGROUP_ATTR_RIGHTARM_TORSO = [_MOVEGROUP_NAME_RIGHTARM_TORSO, _JOINTNAMES_RIGHTARM_TORSO]
+
     _MOVEGROUP_NAME_LEFTHAND = 'left_hand'
     _JOINTNAMES_LEFTHAND = ['LARM_JOINT5']
     _MOVEGROUP_ATTR_LEFTHAND = [_MOVEGROUP_NAME_LEFTHAND, _JOINTNAMES_LEFTHAND]
@@ -85,10 +93,12 @@ class TestDualarmMoveit(unittest.TestCase):
     # List of all MoveGroup set
     _MOVEGROUP_NAMES = sorted([_MOVEGROUP_NAME_TORSO, _MOVEGROUP_NAME_HEAD,
                                _MOVEGROUP_NAME_LEFTARM, _MOVEGROUP_NAME_RIGHTARM,
+                               _MOVEGROUP_NAME_LEFTARM_TORSO, _MOVEGROUP_NAME_RIGHTARM_TORSO,
                                _MOVEGROUP_NAME_LEFTHAND, _MOVEGROUP_NAME_RIGHTHAND,
                                _MOVEGROUP_NAME_BOTHARMS, _MOVEGROUP_NAME_UPPERBODY])
     _MOVEGROUP_ATTRS = [_MOVEGROUP_ATTR_TORSO, _MOVEGROUP_ATTR_HEAD,
                         _MOVEGROUP_ATTR_LEFTARM, _MOVEGROUP_ATTR_RIGHTARM,
+                        _MOVEGROUP_ATTR_LEFTARM_TORSO, _MOVEGROUP_ATTR_RIGHTARM_TORSO,
                         _MOVEGROUP_ATTR_LEFTHAND, _MOVEGROUP_ATTR_RIGHTHAND,
                         _MOVEGROUP_ATTR_BOTHARMS, _MOVEGROUP_ATTR_UPPERBODY]
 
@@ -227,7 +237,7 @@ class TestDualarmMoveit(unittest.TestCase):
         rarm.set_pose_target(target_pose_r)
 
         print "=" * 10," plan1 ..."
-        self.assertTrue(rarm.go())
+        self.assertTrue(rarm.go() or rarm.go() or rarm.go())
         rospy.sleep(1)
 
         target_pose_l = [
@@ -242,7 +252,7 @@ class TestDualarmMoveit(unittest.TestCase):
         larm.set_pose_target(target_pose_l)
 
         print "=" * 10," plan2 ..."
-        self.assertTrue(larm.go())
+        self.assertTrue(larm.go() or larm.go() or larm.go())
         rospy.sleep(1)
 
         #Clear pose
@@ -259,14 +269,14 @@ class TestDualarmMoveit(unittest.TestCase):
         rarm.set_pose_target(target_pose_r)
 
         print "=" * 10, " plan3..."
-        self.assertTrue(rarm.go())
+        self.assertTrue(rarm.go() or rarm.go() or rarm.go())
         rospy.sleep(1)
 
         print "=" * 10,"Initial pose ..."
         rarm.set_pose_target(rarm_initial_pose)
         larm.set_pose_target(larm_initial_pose)
-        self.assertTrue(rarm.go())
-        self.assertTrue(larm.go())
+        self.assertTrue(rarm.go() or rarm.go() or rarm.go())
+        self.assertTrue(larm.go() or larm.go() or larm.go())
 
     def test_botharms_plan(self):
         botharms = self._MOVEGROUP_ATTR_BOTHARMS[2]
@@ -290,7 +300,7 @@ class TestDualarmMoveit(unittest.TestCase):
         target_pose_l.orientation.w = q[3]
         botharms.set_pose_target(target_pose_r, 'RARM_JOINT5_Link')
         botharms.set_pose_target(target_pose_l, 'LARM_JOINT5_Link')
-        self.assertTrue(botharms.go())
+        self.assertTrue(botharms.go() or botharms.go() or botharms.go())
         rospy.sleep(1)
 
         target_pose_r.position.x = 0.3
@@ -301,7 +311,7 @@ class TestDualarmMoveit(unittest.TestCase):
         target_pose_l.position.z = 0.0
         botharms.set_pose_target(target_pose_r, 'RARM_JOINT5_Link')
         botharms.set_pose_target(target_pose_l, 'LARM_JOINT5_Link')
-        self.assertTrue(botharms.go())
+        self.assertTrue(botharms.go() or botharms.go() or botharms.go())
 
 if __name__ == '__main__':
     import rostest

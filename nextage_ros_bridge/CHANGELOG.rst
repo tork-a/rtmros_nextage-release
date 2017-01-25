@@ -2,6 +2,9 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.13 (2017-01-24)
+-------------------
+
 0.7.12 (2017-01-10)
 -------------------
 * [fix][nxo client] Fix wrong string print that could stop the script to work. `#276 <https://github.com/tork-a/rtmros_nextage/pull/276>`_

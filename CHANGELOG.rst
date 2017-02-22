@@ -2,6 +2,11 @@
 Changelog for package nextage_ros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.14 (2017-02-21)
+-------------------
+* [capability] hand camera now available on hrpsys simulator.
+* Contributors: Kei Okada, Isaac I.Y. Saito
+
 0.7.13 (2017-01-24)
 -------------------
 

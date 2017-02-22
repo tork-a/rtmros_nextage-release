@@ -1,0 +1,295 @@
+ros-indigo-nextage-gazebo (0.7.14-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 21 Feb 2017 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.13-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 24 Jan 2017 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.12-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 10 Jan 2017 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.11-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sat, 05 Nov 2016 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.10-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 19 Oct 2016 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.9-0saucy) saucy; urgency=high
+
+  * [fix][test] gz.test must be one file to avoid collsion on gazebo master uri
+  * [fix] Missing installation
+  * [fix] : test/test_nxo_gz.py, because of changeing contorller parameter?
+  * [improve] tune pid parameter for gazebo
+  * Contributors: Kei Okada
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 13 Oct 2016 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.8-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 01 Jul 2016 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.7-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 16 May 2016 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.6-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 09 Feb 2016 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.5-0saucy) saucy; urgency=high
+
+  * [fix] fix namespace so that existing app can operate the robot on Gazebo
+  * Contributors: Kei Okada
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 27 Jan 2016 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.4-0saucy) saucy; urgency=high
+
+  * need to wait for finishing go_initial.py (https://github.com/tork-a/rtmros_nextage/pull/223/files#diff-16b25951a50b1e80569929d32a09102bR14)
+  * pass arg GUI
+  * [gz] Retry tests upon failure
+  * [gz] Add small unit tests
+  * [gz] Minor formatting
+  * [gazebo] Add non-zero mass so that links are not ignored
+  * update control parameters
+  * http://answers.ros.org/question/200777/using-both-jointtrajectorycontroller-and-jointpositioncontroller-at-same-time-in-ros_control, we may not need both position controller and trajectory controller
+  * use NextageOpen name space, use robot name. Not sure if this is necessary
+  * package.xml: add depends to ros_controllers
+  * set depend from nextage_description to nextage_gazebo is not a good idea, nextage_gazbeo should depends on nextage_description
+  * [gazebo] Add non-zero mass so that links are not ignored
+  * Add Gazebo package. So far model not shown, and model seems to keep falling.
+  * Contributors: Isaac I.Y. Saito, Kei Okada
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 26 Jan 2016 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.3-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 31 Dec 2015 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.2-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 02 Nov 2015 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.1-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 26 Oct 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.7.0-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 21 Oct 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.6-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sat, 17 Oct 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.5-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 16 Oct 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.4-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 02 Oct 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.3-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sat, 15 Aug 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.2-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 12 May 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.1-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 09 Mar 2015 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.6.0-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 03 Feb 2015 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.5.3-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 13 Nov 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.5.2-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 03 Nov 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.5.1-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 17 Oct 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.4.2-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 01 Oct 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.4.1-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 03 Sep 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.18-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 01 Aug 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.17-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 24 Jul 2014 21:01:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.16-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 24 Jul 2014 17:09:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.15-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sun, 13 Jul 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.14-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 20 Jun 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.13-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 28 May 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.12-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 06 May 2014 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.11-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 05 Mar 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.10-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 18 Feb 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.9-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 03 Feb 2014 20:34:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.8-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 03 Feb 2014 11:12:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.7-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sun, 19 Jan 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.6-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 13 Jan 2014 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.5-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 25 Dec 2013 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.4-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 03 Dec 2013 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.3-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 05 Nov 2013 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.2-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 04 Nov 2013 08:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.1-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Thu, 31 Oct 2013 07:00:00 -0000
+
+ros-indigo-nextage-gazebo (0.2.0-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 30 Oct 2013 07:00:00 -0000
+
+

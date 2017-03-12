@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>rtmros_nextage</name>
-  <version>0.7.14</version>
+  <version>0.7.15</version>
   <description>The rtmros_nextage package is a ROS interface for <a href = "http://nextage.kawada.jp/en/">Nextage</a> dual-armed robot from Kawada Robotics Inc.
   </description>
   <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>
@@ -15,6 +15,7 @@
   <url type="repository">https://github.com/tork-a/rtmros_nextage</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>nextage_calibration</run_depend>
   <run_depend>nextage_description</run_depend>
   <run_depend>nextage_gazebo</run_depend>
   <run_depend>nextage_ik_plugin</run_depend>

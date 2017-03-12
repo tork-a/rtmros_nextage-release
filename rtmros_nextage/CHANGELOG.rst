@@ -2,6 +2,12 @@
 Changelog for package rtmros_nextage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.15 (2017-03-11)
+-------------------
+* [capability] add package nextage_calibration
+* [fix] Model file copyrights.
+* Contributors: Yamamoto Yosuke Design, Isaac I.Y. Saito
+
 0.7.14 (2017-02-21)
 -------------------
 * [capability] hand camera now available on hrpsys simulator.

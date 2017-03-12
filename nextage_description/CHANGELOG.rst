@@ -2,6 +2,10 @@
 Changelog for package nextage_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.7.15 (2017-03-11)
+-------------------
+* [fix] Model file copyrights.
+
 0.7.14 (2017-02-21)
 -------------------
 * [capability] hand camera now available on hrpsys simulator.

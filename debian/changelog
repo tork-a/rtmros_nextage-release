@@ -1,0 +1,14 @@
+ros-indigo-nextage-calibration (0.7.15-0saucy) saucy; urgency=high
+
+  * [capability] add package nextage_calibration
+  * Contributors: Yamamoto Yosuke Design
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Sat, 11 Mar 2017 08:00:00 -0000
+
+ros-indigo-nextage-calibration (0.7.14-0saucy) saucy; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Tue, 21 Feb 2017 08:00:00 -0000
+
+

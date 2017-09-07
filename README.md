@@ -1,3 +1,33 @@
+## rtmros_nextage (kinetic) - 0.8.0-0
+
+The packages in the `rtmros_nextage` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release rtmros_nextage --track kinetic --rosdistro kinetic` on `Thu, 07 Sep 2017 07:22:34 -0000`
+
+These packages were released:
+- `nextage_calibration`
+- `nextage_description`
+- `nextage_gazebo`
+- `nextage_ik_plugin`
+- `nextage_moveit_config`
+- `nextage_ros_bridge`
+- `rtmros_nextage`
+
+Version of package(s) in repository `rtmros_nextage`:
+
+- upstream repository: https://github.com/tork-a/rtmros_nextage.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.8.0-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.26`
+- catkin_pkg version: `0.3.6`
+- rosdep version: `0.11.8`
+- rosdistro version: `0.6.2`
+- vcstools version: `0.1.39`
+
+
 ## rtmros_nextage (indigo) - 0.7.16-0
 
 The packages in the `rtmros_nextage` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo rtmros_nextage` on `Thu, 04 May 2017 07:02:41 -0000`

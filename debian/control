@@ -1,0 +1,12 @@
+Source: ros-kinetic-nextage-gazebo
+Section: misc
+Priority: extra
+Maintainer: TORK <dev@opensource-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-gazebo-ros, ros-kinetic-gazebo-ros-control, ros-kinetic-nextage-description, ros-kinetic-nextage-moveit-config, ros-kinetic-ros-controllers, ros-kinetic-rostest
+Homepage: http://wiki.ros.org/nextage_gazebo
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-nextage-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-gazebo-ros, ros-kinetic-gazebo-ros-control, ros-kinetic-nextage-description, ros-kinetic-nextage-moveit-config, ros-kinetic-ros-controllers
+Description: Gazebo simulation for NEXTAGE Open

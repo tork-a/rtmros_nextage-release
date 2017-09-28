@@ -1,0 +1,13 @@
+Source: ros-kinetic-nextage-calibration
+Section: misc
+Priority: extra
+Maintainer: TORK <dev@opensource-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-nextage-gazebo
+Homepage: http://ros.org/wiki/nextage_calibration
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-nextage-calibration
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-checkerboard-detector, ros-kinetic-dynamic-tf-publisher, ros-kinetic-freenect-stack, ros-kinetic-gazebo-plugins, ros-kinetic-gazebo-ros, ros-kinetic-joint-state-publisher, ros-kinetic-openni2-launch, ros-kinetic-robot-state-publisher, ros-kinetic-tf, ros-kinetic-turtlebot-description, ros-kinetic-urdf
+Description: This package provides .launch files and other tools for calibrating the head-mount cameras to the NEXTAGE Open robot.
+ As of version 0.7.15/March 2017, only Kinect/Xtion is capable (i.e. Ueye cameras, the ones the robot comes with on this head by default, are not yet handled).

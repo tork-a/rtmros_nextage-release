@@ -1,0 +1,34 @@
+#   Original Author: William Woodall, Mani Monajjemi
+
+sudo: required
+dist: trusty
+# Force travis to use its minimal image with default Python settings
+language: generic
+compiler:
+  - gcc
+env:
+  global:
+    - CATKIN_WS=~/catkin_ws
+    - CATKIN_WS_SRC=${CATKIN_WS}/src
+  matrix:
+    - CI_ROS_DISTRO="indigo" DEB_REPOSITORY=http://packages.ros.org/ros/ubuntu
+    - CI_ROS_DISTRO="indigo" DEB_REPOSITORY=http://packages.ros.org/ros-shadow-fixed/ubuntu
+    - CI_ROS_DISTRO="kinetic" DEB_REPOSITORY=http://packages.ros.org/ros/ubuntu
+    - CI_ROS_DISTRO="kinetic" DEB_REPOSITORY=http://packages.ros.org/ros-shadow-fixed/ubuntu
+matrix:
+  allow_failures:
+    - env: CI_ROS_DISTRO="kinetic" DEB_REPOSITORY=http://packages.ros.org/ros/ubuntu
+notifications:
+  email:
+    recipients:
+      - dev@opensource-robotics.tokyo.jp
+    on_success: always #[always|never|change] # default: change
+    on_failure: always #[always|never|change] # default: always
+before_install:
+  - case $CI_ROS_DISTRO in "hydro") export DISTRO=precise;; "indigo") export DISTRO=trusty;; "kinetic") export DISTRO=xenial;; esac;
+  - export DOCKER_IMAGE=ubuntu:$DISTRO
+  - export CI_SOURCE_PATH=$(pwd)
+  - export REPOSITORY_NAME=${PWD##*/}
+  - docker images
+script:
+  - docker run -v $HOME:$HOME -e CI_SOURCE_PATH -e REPOSITORY_NAME -e HOME -e DISTRO -e CI_ROS_DISTRO -e DEB_REPOSITORY -e CI_SOURCE_PATH -e CATKIN_WS -e CATKIN_WS_SRC -e TRAVIS_BUILD_DIR $DOCKER_IMAGE bash -c 'cd $CI_SOURCE_PATH; source .travis.sh'

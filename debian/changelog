@@ -1,0 +1,22 @@
+ros-indigo-nextage-calibration (0.7.16-1trusty) trusty; urgency=high
+
+  * [fix] error "libgazebo_ros_openni_kinect.so: cannot open shared object file" #324 <https://github.com/tork-a/rtmros_nextage/pull/324>
+  * [maintenance] Add simple testcases.
+  * Contributors: Kei Okada, Yamamoto Yosuke, Isaac I.Y. Saito
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Wed, 03 May 2017 15:00:00 -0000
+
+ros-indigo-nextage-calibration (0.7.15-1trusty) trusty; urgency=high
+
+  * [capability] add package nextage_calibration
+  * Contributors: Yamamoto Yosuke
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Fri, 10 Mar 2017 15:00:00 -0000
+
+ros-indigo-nextage-calibration (0.7.14-1trusty) trusty; urgency=high
+
+
+
+ -- TORK <dev@opensource-robotics.tokyo.jp>  Mon, 20 Feb 2017 15:00:00 -0000
+
+

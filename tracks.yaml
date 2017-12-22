@@ -55,16 +55,16 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
     devel_branch: indigo-devel
-    last_version: 0.8.3
+    last_version: 0.7.16
     name: upstream
     patches: null
     release_inc: '0'
     release_repo_url: null
-    release_tag: :{version}
+    release_tag: 0.7.16 # last version of indigo is 0.7.16
     ros_distro: indigo
     vcs_type: git
     vcs_uri: https://github.com/tork-a/rtmros_nextage.git
-    version: :{auto}
+    version: 0.7.16
   kinetic:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri

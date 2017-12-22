@@ -1,0 +1,31 @@
+From ee984a1130545c1441548cb65278c47e5d8bc68e Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Sat, 23 Dec 2017 00:06:48 +0900
+Subject: [PATCH] patch #355, support USE_HAND_JOINT_STATE_PUBLISHER
+
+---
+ launch/nextage_ros_bridge_real.launch | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/launch/nextage_ros_bridge_real.launch b/launch/nextage_ros_bridge_real.launch
+index 98f2881..7ff06a5 100644
+--- a/launch/nextage_ros_bridge_real.launch
++++ b/launch/nextage_ros_bridge_real.launch
+@@ -5,6 +5,7 @@
+   <arg name="MODEL_FILE" default="/opt/jsk/etc/NEXTAGE/model/main.wrl" /> <!-- This shouldn't be changed unless you know what you're doing; this is the location of vrml file internal to the robot (on QNX OS). -->
+   <arg name="nameserver" default="nextage" /> <!-- Host name of the QNX. -->
+   <arg name="USE_SERVOCONTROLLER" default="false" />
++  <arg name="USE_HAND_JOINT_STATE_PUBLISHER" default="false"/>
+ 
+   <env name="RTCTREE_NAMESERVERS" value="$(arg nameserver):$(arg corbaport)" />
+ 
+@@ -15,5 +16,6 @@
+     <arg name="MODEL_FILE" value="$(arg MODEL_FILE)" />
+     <arg name="nameserver" value="$(arg nameserver)" />
+     <arg name="USE_SERVOCONTROLLER" value="$(arg USE_SERVOCONTROLLER)" />
++    <arg name="USE_HAND_JOINT_STATE_PUBLISHER" value="$(arg USE_HAND_JOINT_STATE_PUBLISHER)"/>
+   </include>
+ </launch>
+-- 
+2.7.4
+

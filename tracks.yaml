@@ -58,9 +58,9 @@ tracks:
     last_version: 0.7.16
     name: upstream
     patches: null
-    release_inc: '0'
+    release_inc: '1'
     release_repo_url: null
-    release_tag: 0.7.16 # last version of indigo is 0.7.16
+    release_tag: 0.7.16
     ros_distro: indigo
     vcs_type: git
     vcs_uri: https://github.com/tork-a/rtmros_nextage.git

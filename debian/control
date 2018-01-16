@@ -1,0 +1,12 @@
+Source: ros-indigo-rtmros-nextage
+Section: misc
+Priority: extra
+Maintainer: TORK <dev@opensource-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/rtmros_nextage
+Standards-Version: 3.9.2
+
+Package: ros-indigo-rtmros-nextage
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-nextage-calibration, ros-indigo-nextage-description, ros-indigo-nextage-gazebo, ros-indigo-nextage-ik-plugin, ros-indigo-nextage-moveit-config, ros-indigo-nextage-ros-bridge
+Description: The rtmros_nextage package is a ROS interface for Nextage dual-armed robot from Kawada Robotics Inc.

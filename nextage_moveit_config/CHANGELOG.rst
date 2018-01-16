@@ -2,6 +2,11 @@
 Changelog for package nextage_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.4 (2018-01-16)
+------------------
+* add moveit_armarker.rviz (`#356 <https://github.com/tork-a/rtmros_nextage/issues/356>`_)
+* Contributors: Yosuke Yamamoto
+
 0.8.3 (2017-12-22)
 ------------------
 

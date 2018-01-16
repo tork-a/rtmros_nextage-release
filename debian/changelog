@@ -1,0 +1,311 @@
+ros-kinetic-nextage-ik-plugin (0.8.3-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 22 Dec 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.8.1-1jessie) jessie; urgency=high
+
+  * Add files for manuals and tutorials / Changes for Gazebo head camera emulation (#350 <https://github.com/tork-a/rtmros_nextage/issues/350>)
+    * mod name CAMERA_HEAD_R/L, remove CATKIN_IGNORE (forgot to add/rm them)
+    * Merge branch 'impr/gazebo_ueye_fixtest' of git://github.com/130s/rtmros_nextage into gazebo_ueye_fixtest
+    * [TEMP] Disable build on some pkgs for debugging purpose only. This MUST be reverted.
+  * Contributors: Isaac I.Y. Saito, Yosuke Yamamoto
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 28 Sep 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.8.0-1jessie) jessie; urgency=high
+
+  * Fix for kinetic (#347 <https://github.com/tork-a/rtmros_nextage/issues/347>)
+    * enable c++-11
+  * Contributors: Kei Okada
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 07 Sep 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.16-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 04 May 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.15-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sat, 11 Mar 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.14-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 21 Feb 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.13-1jessie) jessie; urgency=high
+
+  * [fix] Left arm position issue with IKFast #277 <https://github.com/tork-a/rtmros_nextage/issues/277>
+  * Contributors: Kei Okada
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 24 Jan 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.12-1jessie) jessie; urgency=high
+
+  * [capability] Release nextage_ik_plugin #281 <https://github.com/tork-a/rtmros_nextage/pull/281>
+  * Contributors: Isaac I.Y. Saito
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 10 Jan 2017 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.11-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sat, 05 Nov 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.10-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 19 Oct 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.9-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 13 Oct 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.8-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 01 Jul 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.7-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 16 May 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.6-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 09 Feb 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.5-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 27 Jan 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.4-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 26 Jan 2016 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.3-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 31 Dec 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.2-1jessie) jessie; urgency=high
+
+  * [fix] Manually move ikfast.h to package specific location
+  * Contributors: Kei Okada
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 02 Nov 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.7.1-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 26 Oct 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.6-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sat, 17 Oct 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.5-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 16 Oct 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.4-1jessie) jessie; urgency=high
+
+  * [feat] Add IKFast plugin. Kinematics solver is now selectable in Moveit launch
+  * Contributors: Isaac IY Saito
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 02 Oct 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.3-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sat, 15 Aug 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.2-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 12 May 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.1-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 09 Mar 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.6.0-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 03 Feb 2015 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.5.3-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 13 Nov 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.5.2-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 03 Nov 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.5.1-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 17 Oct 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.4.2-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 01 Oct 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.4.1-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 03 Sep 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.18-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 01 Aug 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.17-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 24 Jul 2014 14:01:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.16-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 24 Jul 2014 10:09:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.15-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sun, 13 Jul 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.14-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Fri, 20 Jun 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.13-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 28 May 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.12-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 06 May 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.11-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 05 Mar 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.10-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 18 Feb 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.9-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 03 Feb 2014 12:34:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.8-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 03 Feb 2014 03:12:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.7-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Sun, 19 Jan 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.6-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 13 Jan 2014 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.5-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 25 Dec 2013 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.4-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 03 Dec 2013 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.3-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Tue, 05 Nov 2013 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.2-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Mon, 04 Nov 2013 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.1-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Thu, 31 Oct 2013 00:00:00 -0000
+
+ros-kinetic-nextage-ik-plugin (0.2.0-1jessie) jessie; urgency=high
+
+
+
+ -- IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>  Wed, 30 Oct 2013 00:00:00 -0000
+
+

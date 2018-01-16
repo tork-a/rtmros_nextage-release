@@ -1,4 +1,4 @@
-From ee984a1130545c1441548cb65278c47e5d8bc68e Mon Sep 17 00:00:00 2001
+From 909dd304bfae598290d6f7ad20d24f9be6a2abfe Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Sat, 23 Dec 2017 00:06:48 +0900
 Subject: [PATCH] patch #355, support USE_HAND_JOINT_STATE_PUBLISHER

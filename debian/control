@@ -1,0 +1,12 @@
+Source: ros-melodic-nextage-ik-plugin
+Section: misc
+Priority: optional
+Maintainer: IK Fast Plugin Creater <support@opensouce-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 9.0.0), liblapack-dev, ros-melodic-catkin, ros-melodic-moveit-core, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-tf-conversions
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-nextage-ik-plugin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, liblapack-dev, ros-melodic-moveit-core, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-tf-conversions
+Description: IKFast package for NEXTAGE Open

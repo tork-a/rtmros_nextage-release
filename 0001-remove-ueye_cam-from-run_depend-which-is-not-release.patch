@@ -1,0 +1,25 @@
+From 8217eda36ec68e5d4b9148283850fd1491aa1952 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Thu, 25 Jun 2020 08:59:46 +0900
+Subject: [PATCH] remove ueye_cam from run_depend, which is not released yet
+
+---
+ package.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/package.xml b/package.xml
+index 6f4ba1f8..7e4b1db1 100644
+--- a/package.xml
++++ b/package.xml
+@@ -24,7 +24,7 @@
+   <run_depend version_gte="1.1.13">hironx_ros_bridge</run_depend>
+   <run_depend>nextage_description</run_depend>
+   <run_depend>stereo_image_proc</run_depend>
+-  <run_depend>ueye_cam</run_depend>
++  <!-- <run_depend>ueye_cam</run_depend> --> <!-- ueye_cam is not released in melodic https://github.com/anqixu/ueye_cam-release/issues/1 -->
+   <run_depend>ar_track_alvar</run_depend>
+ 
+   <test_depend>rostest</test_depend>
+-- 
+2.17.1
+

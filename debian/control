@@ -1,0 +1,12 @@
+Source: ros-melodic-rtmros-nextage
+Section: misc
+Priority: optional
+Maintainer: TORK <dev@opensource-robotics.tokyo.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://ros.org/wiki/rtmros_nextage
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rtmros-nextage
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-nextage-calibration, ros-melodic-nextage-description, ros-melodic-nextage-gazebo, ros-melodic-nextage-ik-plugin, ros-melodic-nextage-moveit-config, ros-melodic-nextage-ros-bridge
+Description: The rtmros_nextage package is a ROS interface for Nextage dual-armed robot from Kawada Robotics Inc.

@@ -1,3 +1,35 @@
+## rtmros_nextage (melodic) - 0.8.6-3
+
+The packages in the `rtmros_nextage` repository were released into the `melodic` distro by running `/usr/bin/bloom-release rtmros_nextage --rosdistro melodic --track melodic` on `Tue, 14 Jul 2020 06:10:22 -0000`
+
+These packages were released:
+- `nextage_description`
+- `nextage_gazebo`
+- `nextage_ik_plugin`
+- `nextage_moveit_config`
+- `nextage_ros_bridge`
+- `rtmros_nextage`
+
+These packages were explicitly ignored:
+- `nextage_calibration`
+
+Version of package(s) in repository `rtmros_nextage`:
+
+- upstream repository: https://github.com/tork-a/rtmros_nextage.git
+- release repository: https://github.com/tork-a/rtmros_nextage-release.git
+- rosdistro version: `0.8.6-2`
+- old version: `0.8.6-2`
+- new version: `0.8.6-3`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.1`
+- vcstools version: `0.1.42`
+
+
 ## rtmros_nextage (melodic) - 0.8.6-1
 
 The packages in the `rtmros_nextage` repository were released into the `melodic` distro by running `/usr/bin/bloom-release rtmros_nextage --rosdistro melodic --track melodic` on `Wed, 17 Jun 2020 03:31:15 -0000`

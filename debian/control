@@ -1,0 +1,12 @@
+Source: ros-melodic-nextage-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-hironx-moveit-config, ros-melodic-joint-state-publisher, ros-melodic-nextage-ros-bridge, ros-melodic-robot-state-publisher, ros-melodic-rostest
+Homepage: http://ros.org/wiki/nextage_moveit_config
+Standards-Version: 3.9.2
+
+Package: ros-melodic-nextage-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-hironx-moveit-config, ros-melodic-moveit-planners, ros-melodic-moveit-ros, ros-melodic-moveit-ros-move-group, ros-melodic-moveit-ros-planning-interface, ros-melodic-moveit-ros-visualization, ros-melodic-moveit-simple-controller-manager, ros-melodic-nextage-ros-bridge, ros-melodic-trac-ik-kinematics-plugin
+Description: An automatically generated package with all the configuration and launch files for using the NextageOpen with the MoveIt Motion Planning Framework.

@@ -1,0 +1,25 @@
+From c6f97fa14c129c7fbfd00a53ed16c131de2d4362 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Tue, 14 Jul 2020 15:02:52 +0900
+Subject: [PATCH] remove nextage_calibration from rtmros_nextage
+
+---
+ package.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/package.xml b/package.xml
+index a1cdc7b0..cb15b5bf 100644
+--- a/package.xml
++++ b/package.xml
+@@ -15,7 +15,7 @@
+   <url type="repository">https://github.com/tork-a/rtmros_nextage</url>
+ 
+   <buildtool_depend>catkin</buildtool_depend>
+-  <run_depend>nextage_calibration</run_depend>
++  <!-- <run_depend>nextage_calibration</run_depend> --> <!-- not released on melodic -->
+   <run_depend>nextage_description</run_depend>
+   <run_depend>nextage_gazebo</run_depend>
+   <run_depend>nextage_ik_plugin</run_depend>
+-- 
+2.17.1
+
